@@ -2,8 +2,6 @@
 
 include('inc/simple_html_dom.php');
 
-//error_reporting(0);
-
 header("Access-Control-Allow-Origin: *");
 
 if(isset($_REQUEST["mock"])) {
@@ -57,7 +55,7 @@ if(isset($_REQUEST["mock"])) {
 
 
     // GET
-    curl_setopt($ch, CURLOPT_URL, $loginUrl);    // Setting URL to GET
+    curl_setopt($ch, CURLOPT_URL, 'http://google.com' /*$loginUrl*/);    // Setting URL to GET
     curl_setopt($ch, CURLOPT_POST, false);   // Setting method as GET
     $result = curl_exec($ch);
 
