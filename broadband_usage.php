@@ -2,7 +2,7 @@
 
 include('inc/simple_html_dom.php');
 
-error_reporting(0);
+//error_reporting(0);
 
 header("Access-Control-Allow-Origin: *");
 
@@ -94,7 +94,7 @@ if(isset($_REQUEST["mock"])) {
     $data["timestamp"] = time();
     $data["timeTaken"] = microtime(true) - $startTime;
 
-    if($data["remain"] && $data["total"]) {
+    if($data["remain"] && $data["allotted"]) {
       $data["error"] = false;
     } else {
       $data["error"] = true;
