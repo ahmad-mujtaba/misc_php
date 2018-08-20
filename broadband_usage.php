@@ -21,8 +21,8 @@ if(isset($_REQUEST["mock"])) {
 
     
     $credentials = array(
-        'txtUserName' => 'mujtaba_aab16',
-        'txtlogPassword' => '123456',
+        'txtUserName' => $_REQUEST["user"],
+        'txtlogPassword' => $_REQUEST["pass"],
         'btnSubmit' => 'Submit'
     );
 
