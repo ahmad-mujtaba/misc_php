@@ -3,6 +3,7 @@
 include('inc/simple_html_dom.php');
 
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
 
 if(isset($_REQUEST["mock"])) {
     sleep(1);
@@ -92,7 +93,7 @@ if(isset($_REQUEST["mock"])) {
     $data["timestamp"] = time();
     $data["timeTaken"] = microtime(true) - $startTime;
 
-    if($data["remain"] && $data["allotted"]) {
+    if(array_key_exists("remain", $data) &&array_key_exists("allotted", $data)) {
       $data["error"] = false;
     } else {
       $data["error"] = true;
